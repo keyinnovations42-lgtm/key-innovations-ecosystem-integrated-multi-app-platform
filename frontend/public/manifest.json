@@ -1,0 +1,27 @@
+{
+  "name": "CyberGuard Parental Control",
+  "short_name": "CyberGuard",
+  "description": "Android cybersecurity parental control app for detecting and blocking explicit material in real time",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f0a1f",
+  "theme_color": "#8b5cf6",
+  "orientation": "portrait-primary",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/assets/generated/pwa-icon-cyberguard-192.dim_192x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/generated/pwa-icon-cyberguard-512.dim_512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["security", "parental-control", "utilities"],
+  "screenshots": []
+}

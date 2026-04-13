@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.75rem;
+        /* CyberGuard purple/blue secure theme - light mode */
+        --background: 0.99 0 0;
+        --foreground: 0.15 0.02 260;
+        --card: 1 0 0;
+        --card-foreground: 0.15 0.02 260;
+        --popover: 1 0 0;
+        --popover-foreground: 0.15 0.02 260;
+        --primary: 0.55 0.20 270;
+        --primary-foreground: 0.99 0 0;
+        --secondary: 0.94 0.02 240;
+        --secondary-foreground: 0.15 0.02 260;
+        --muted: 0.96 0.01 260;
+        --muted-foreground: 0.50 0.02 260;
+        --accent: 0.90 0.03 250;
+        --accent-foreground: 0.15 0.02 260;
+        --destructive: 0.577 0.245 27.325;
+        --destructive-foreground: 0.985 0 0;
+        --success: 0.65 0.18 150;
+        --success-foreground: 0.99 0 0;
+        --warning: 0.70 0.20 80;
+        --warning-foreground: 0.15 0.02 260;
+        --border: 0.92 0.01 260;
+        --input: 0.92 0.01 260;
+        --ring: 0.55 0.20 270;
+        --chart-1: 0.55 0.20 270;
+        --chart-2: 0.65 0.18 150;
+        --chart-3: 0.70 0.20 80;
+        --chart-4: 0.577 0.245 27.325;
+        --chart-5: 0.60 0.18 240;
+    }
+
+    .dark {
+        /* CyberGuard purple/blue secure theme - dark mode */
+        --background: 0.12 0.02 260;
+        --foreground: 0.95 0.01 250;
+        --card: 0.16 0.02 260;
+        --card-foreground: 0.95 0.01 250;
+        --popover: 0.14 0.02 260;
+        --popover-foreground: 0.95 0.01 250;
+        --primary: 0.60 0.22 270;
+        --primary-foreground: 0.12 0.02 260;
+        --secondary: 0.22 0.02 260;
+        --secondary-foreground: 0.95 0.01 250;
+        --muted: 0.24 0.02 260;
+        --muted-foreground: 0.65 0.02 260;
+        --accent: 0.30 0.04 250;
+        --accent-foreground: 0.95 0.01 250;
+        --destructive: 0.704 0.191 22.216;
+        --destructive-foreground: 0.12 0.02 260;
+        --success: 0.70 0.20 150;
+        --success-foreground: 0.12 0.02 260;
+        --warning: 0.75 0.22 80;
+        --warning-foreground: 0.12 0.02 260;
+        --border: 0.26 0.02 260;
+        --input: 0.26 0.02 260;
+        --ring: 0.60 0.22 270;
+        --chart-1: 0.60 0.22 270;
+        --chart-2: 0.70 0.20 150;
+        --chart-3: 0.75 0.22 80;
+        --chart-4: 0.704 0.191 22.216;
+        --chart-5: 0.60 0.20 240;
+    }
+
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+/* Mobile-optimized touch targets and interactions */
+@layer utilities {
+    .touch-manipulation {
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    .success-text {
+        color: oklch(var(--success));
+    }
+    
+    .warning-text {
+        color: oklch(var(--warning));
+    }
+    
+    .success-bg {
+        background-color: oklch(var(--success));
+    }
+    
+    .warning-bg {
+        background-color: oklch(var(--warning));
+    }
+}
+
+/* Improve mobile scrolling performance */
+@media (max-width: 768px) {
+    * {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* Ensure proper text sizing on mobile */
+@supports (-webkit-touch-callout: none) {
+    body {
+        -webkit-text-size-adjust: 100%;
+    }
+}
